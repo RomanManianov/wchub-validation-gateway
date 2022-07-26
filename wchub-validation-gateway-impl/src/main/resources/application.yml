@@ -1,0 +1,26 @@
+application:
+  swagger:
+    enabled: true
+    title: Шлюз валидации
+    version: 1.0.0
+
+server:
+  port: 8080
+  servlet:
+    context-path: /validation-gateway
+
+spring:
+  validation:
+    datasource:
+      jdbcUrl: jdbc:postgresql://localhost:5432/validation_db?currentSchema=public
+      username: postgres
+      password: postgres
+    flyway:
+      schemas: public
+      baseline-on-migrate: true
+      placeholder-replacement: false
+
+authorize-service:
+  schema: http://
+  base-url: localhost:8081/authorization-service/api/v1/
+  send-user-creds: user-authorization/

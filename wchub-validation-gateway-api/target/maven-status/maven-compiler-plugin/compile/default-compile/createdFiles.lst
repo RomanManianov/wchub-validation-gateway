@@ -1,0 +1,4 @@
+wchub\validation\gateway\api\dto\MessageDto.class
+wchub\validation\gateway\api\resource\NotifyResource.class
+wchub\validation\gateway\api\dto\UserDto.class
+wchub\validation\gateway\api\resource\AdminResource.class

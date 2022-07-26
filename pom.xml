@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.wcgub</groupId>
+    <artifactId>wchub-validation-gateway</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>wchub-validation-gateway-api</module>
+        <module>wchub-validation-gateway-db</module>
+        <module>wchub-validation-gateway-impl</module>
+        <module>wchub-validation-gateway-test</module>
+    </modules>
+
+    <properties>
+    <!--        Base        -->
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    <!--        Spring      -->
+        <spring.boot.starter.version>2.5.4</spring.boot.starter.version>
+        <spring.boot.starter.test.version>2.5.4</spring.boot.starter.test.version>
+        <spring.boot.starter.data.jpa>2.3.4.RELEASE</spring.boot.starter.data.jpa>
+        <spring.boot.starter.web.version>2.5.4</spring.boot.starter.web.version>
+    <!--        Test        -->
+        <junit.platform.launcher.version>1.7.2</junit.platform.launcher.version>
+        <junit.jupiter.engine.version>5.7.2</junit.jupiter.engine.version>
+        <junit.vintage.engine.version>5.7.2</junit.vintage.engine.version>
+    <!--        DB      -->
+        <postgresql.version>42.2.16</postgresql.version>
+    <!--        Other       -->
+        <lombok.version>1.18.20</lombok.version>
+    </properties>
+    <dependencies>
+        <!--        Spring      -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>${spring.boot.starter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring.boot.starter.test.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>${spring.boot.starter.data.jpa}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring.boot.starter.web.version}</version>
+        </dependency>
+                <!--        Test        -->
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-launcher</artifactId>
+            <version>${junit.platform.launcher.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.jupiter.engine.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
+            <version>${junit.vintage.engine.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!--        DB      -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postgresql.version}</version>
+        </dependency>
+        <!--        Other       -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
